@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4035968544106422778}
   - component: {fileID: 4035968544106422779}
   - component: {fileID: 4035968544106422776}
+  - component: {fileID: 90229960}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4035968544106422777}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &4035968544106422773
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,7 +141,26 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
   navMeshAgent: {fileID: 0}
+  EnemyManager: {fileID: 0}
   nextWayPoint: 0
+--- !u!114 &90229960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035968544106422777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875b92641377a1e45a1b68fb47f85021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPowerData: {fileID: 0}
+  power: 0
+  health: 0
+  damage: 0

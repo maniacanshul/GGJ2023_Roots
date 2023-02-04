@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using System.Collections.Generic;
 
 using GGJ.Data;
+using Unity.VisualScripting;
 
 namespace GGJ.Enemies
 {
@@ -18,11 +19,13 @@ namespace GGJ.Enemies
         [ReadOnly] public float stateTimeElapsed = 0f;
 
         [HideInInspector] public NavMeshAgent navMeshAgent;
+        [HideInInspector] public EnemyManager EnemyManager;
         [HideInInspector] public int nextWayPoint;
         
 
         private void Awake() {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            EnemyManager = GetComponent<EnemyManager>();
         }
 
         private void Update() {

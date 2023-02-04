@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da35ad5d59173644faabec31e050794b, type: 3}
   m_Name: DieState
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: 126f49ab85f19db4ca41ee687495df40, type: 2}
+  transitions: []
