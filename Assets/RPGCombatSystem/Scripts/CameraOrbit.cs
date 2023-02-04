@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraOrbit : MonoBehaviour
 {
 	public Transform refCamera;
-	public Vector3 offsetCamera = new Vector3(0, 0.5f, 0);
+	public Vector3 offsetCamera = new Vector3(0, 10.5f, 20);
 	public float distance = 2.5f;
 	public float xSpeed = 400.0f;
 	public float ySpeed = 80.0f;

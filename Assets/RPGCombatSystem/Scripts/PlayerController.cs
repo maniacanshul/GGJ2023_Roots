@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector] public CharacterController charCont;
     [HideInInspector] public Animator anim;
     public GameObject childPlayer;
     public Camera cam;
+    [SerializeField]
+    CinemachineVirtualCamera thirdPersonCam;
     public GameObject movIndicator; //Where is the character moving to
 
     [HideInInspector] public SoundManager soundMan;
@@ -143,7 +145,7 @@ public class PlayerController : MonoBehaviour
             if (moveDirection.magnitude > 0) //Fixes the problem when there is no movement
             {
                 //To rotate the controller when moving and position it correctly relative to the camera
-                charCont.transform.rotation = new Quaternion(charCont.transform.rotation.x, cam.transform.rotation.y, charCont.transform.rotation.z, cam.transform.rotation.w);
+                charCont.transform.rotation = new Quaternion(charCont.transform.rotation.x, thirdPersonCam.transform.rotation.y, charCont.transform.rotation.z, thirdPersonCam.transform.rotation.w);
 
                 //Smoothly rotate the character in the xz plane towards the direction of movement
                 Vector3 targetActPosition = new Vector3(movIndicator.transform.position.x, childPlayer.transform.position.y, movIndicator.transform.position.z);
