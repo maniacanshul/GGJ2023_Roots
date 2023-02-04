@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 groundNormal;
 
     [HideInInspector] public bool canMove = true; //If player can move or not because is attaking or hitted
-    private bool hit = false; //If player is hitted it will be true
+    public bool hit = false; //If player is hitted it will be true
 
     void Awake()
     {
@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviour
                 {
                     hit = false;
                     canMove = true;
+                    GameManager.instance.OnPlayerHit(10);
                     anim.Play("Idle"); //To unlock the animation in some weird cases
                 }
             }
