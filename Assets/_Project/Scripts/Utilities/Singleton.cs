@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Platformer.Utilities {
+namespace GGJ.Utilities {
     public class Singleton<T> : MonoBehaviour where T : Singleton<T> {
         protected static T _instance;
 
