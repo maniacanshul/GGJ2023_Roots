@@ -25,5 +25,13 @@ namespace GGJ.Enemies
                 else controller.TransitionToState(t.falseState);
             }
         }
+
+        public void OnEnterState(StateController controller) {
+            foreach (var action in actions) action.OnEnterState(controller);
+        }
+
+        public void OnExitState(StateController controller) {
+            foreach (var action in actions) action.OnExitState(controller);
+        }
     }
 }

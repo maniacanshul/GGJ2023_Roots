@@ -15,9 +15,11 @@ namespace GGJ.Enemies
 
         [Header("Debug")]
         [ReadOnly] public Transform chaseTarget;
+        [ReadOnly] public float stateTimeElapsed = 0f;
 
         [HideInInspector] public NavMeshAgent navMeshAgent;
         [HideInInspector] public int nextWayPoint;
+        
 
         private void Awake() {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -25,17 +27,21 @@ namespace GGJ.Enemies
 
         private void Update() {
             m_currentState.UpdateState(this);
+
+            stateTimeElapsed += Time.deltaTime;
         }
 
         public void TransitionToState(State nextState) {
             if (nextState == m_remainState) return;
 
+            m_currentState.OnExitState(this);
             m_currentState = nextState;
+            m_currentState.OnEnterState(this);
             OnExitState();
         }    
 
         private void OnExitState() {
-
+            stateTimeElapsed = 0f;
         }
     }
 }
