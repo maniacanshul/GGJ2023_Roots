@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,11 +7,17 @@ using UnityEngine.Serialization;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI powerText;
+    [SerializeField] private TMP_Text powerText;
     public ScriptableObjectNumbersGenerator enemyPowerData;
     public int power;
     public int health { get; private set; } = 64;
     public int damage { get; private set; }
+
+
+    private void Awake()
+    {
+        powerText = GetComponentInChildren<TMP_Text>();
+    }
 
     public void setPower(int power)
     {
