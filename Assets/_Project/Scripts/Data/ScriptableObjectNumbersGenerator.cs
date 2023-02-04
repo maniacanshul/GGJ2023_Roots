@@ -45,6 +45,40 @@ public class ScriptableObjectNumbersGenerator : ScriptableObject
         }
     }
 
+    public int GetPerfectSquare(int max) {
+        List<int> squares = new List<int>();
+        for (int i = 0; i < perfectSquares.Count; i++)
+        {
+            if (perfectSquares[i] > max) break;
+
+            squares.Add(perfectSquares[i]);
+        }
+        
+        return squares[Random.Range(0, squares.Count)];
+    }
+
+    public int GetPerfectCube(int max) {
+        List<int> cubes = new List<int>();
+        for (int i = 0; i < perfectCubes.Count; i++)
+        {
+            if (perfectCubes[i] > max) break;
+            cubes.Add(perfectCubes[i]);
+        }
+        
+        return cubes[Random.Range(0, cubes.Count)];
+    }
+
+    public int GetNormalNumber(int max) {
+        List<int> n = new List<int>();
+        for (int i = 0; i < remainingNumbers.Count; i++)
+        {
+            if (remainingNumbers[i] > max) break;
+            n.Add(remainingNumbers[i]);
+        }
+        
+        return n[Random.Range(0, n.Count)];
+    }
+
     public bool IsNumberAPerfectSquare(int number)
     {
         return perfectSquares.Contains(number);
