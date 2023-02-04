@@ -11,6 +11,7 @@ namespace GGJ.Enemies
     {
         [SerializeField] private State m_currentState;
         [SerializeField] private State m_remainState;
+        
         public EnemyData enemyData;
         public List<Transform> wayPointList;
 
