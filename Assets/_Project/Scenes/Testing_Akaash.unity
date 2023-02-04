@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3224a543bb2e745aae613db3372b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 10800
+  timeRemaining: 600
   timerIsRunning: 0
   timeText: {fileID: 451804441}
 --- !u!4 &409304130
@@ -30758,6 +30758,7 @@ MonoBehaviour:
   maxDashTime: 0.5
   dashSpeed: 10
   canMove: 1
+  hit: 0
 --- !u!143 &7690795490522701402
 CharacterController:
   m_ObjectHideFlags: 0

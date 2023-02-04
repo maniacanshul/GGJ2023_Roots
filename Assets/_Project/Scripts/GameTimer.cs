@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
+
 public class GameTimer : MonoBehaviour
 {
-    public float timeRemaining = 10800;
+    public float timeRemaining = 60;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
+
+    private Tween timerTextTween;
+
+
     private void Start()
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        DisplayTime();
     }
     void Update()
     {
@@ -20,7 +27,6 @@ public class GameTimer : MonoBehaviour
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
-                DisplayTime(timeRemaining);
             }
             else
             {
@@ -30,11 +36,15 @@ public class GameTimer : MonoBehaviour
             }
         }
     }
-    void DisplayTime(float timeToDisplay)
+
+    void DisplayTime()
     {
-        timeToDisplay += 1;
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        float currentValue = 10800;
+        timerTextTween = DOTween.To(() => currentValue, x => currentValue = x, 0, timeRemaining).SetEase(Ease.Linear).OnUpdate(() =>
+        {
+            float minutes = Mathf.FloorToInt(currentValue / 60);
+            float seconds = Mathf.FloorToInt(currentValue % 60);
+            timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        });
     }
 }
