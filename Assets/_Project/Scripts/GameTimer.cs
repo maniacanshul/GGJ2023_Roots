@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using System;
 
 public class GameTimer : MonoBehaviour
 {
@@ -42,9 +43,11 @@ public class GameTimer : MonoBehaviour
         float currentValue = 10800;
         timerTextTween = DOTween.To(() => currentValue, x => currentValue = x, 0, timeRemaining).SetEase(Ease.Linear).OnUpdate(() =>
         {
-            float minutes = Mathf.FloorToInt(currentValue / 60);
-            float seconds = Mathf.FloorToInt(currentValue % 60);
-            timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            // float minutes = Mathf.FloorToInt(currentValue / 60);
+            // float hours
+            // float seconds = Mathf.FloorToInt(currentValue % 60);
+            TimeSpan timeSpan = TimeSpan.FromSeconds(currentValue);
+            timeText.text = timeSpan.ToString(@"hh\:mm\:ss");
         });
     }
 }
