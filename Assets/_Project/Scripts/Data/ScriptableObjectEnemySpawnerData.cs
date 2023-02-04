@@ -7,12 +7,17 @@ using UnityEngine;
 public class ScriptableObjectEnemySpawnerData : ScriptableObject
 {
     public int maxEnemiesOnThisLevel;
+    public int maxEnemyPower = 97;
     public List<EnemySpawnProbability> enemyData;
 
     [Header("Do Not Edit Manually, Use Populate Enemies Context Button to generate")]
     [ReadOnly] public List<Enemy_Type> enemiesForThisLevel;
 
     private int counter = 0;
+    
+    private void OnEnable() {
+        counter = 0;
+    }
 
     public Enemy_Type GetEnemyToSpawn()
     {
