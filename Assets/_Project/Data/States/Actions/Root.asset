@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da35ad5d59173644faabec31e050794b, type: 3}
-  m_Name: DieState
+  m_Script: {fileID: 11500000, guid: 8dc4a98be07d9cd448f9bc45ff7a7248, type: 3}
+  m_Name: Root
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 11400000, guid: 126f49ab85f19db4ca41ee687495df40, type: 2}
-  transitions: []
