@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.supyrb.signals": {
+      "version": "https://github.com/supyrb/signals.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "c7de4b386a06cbe9f3c0ba9a88eb7f108ebe612a"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.9",
       "depth": 1,
