@@ -7,5 +7,6 @@ namespace GGJ.Data {
         public float viewDistance;
         public int health;
         public float maxChaseDistance = 5;
+        public int damage = 10;
     }   
 }
