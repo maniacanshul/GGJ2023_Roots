@@ -17,10 +17,10 @@ public class Weapon : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+        Debug.Log(other.name);
         if (other.tag == "Enemy")
         {
-            DmgInfo dmgInfo = new DmgInfo(dmgValue, dmgColor, transform.parent.position);
-            other.SendMessage("ApplyDmg", dmgInfo);
+            other.SendMessage("TakeDamage", dmgValue);
         }
 	}
 

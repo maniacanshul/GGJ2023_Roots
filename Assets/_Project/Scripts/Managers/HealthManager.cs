@@ -18,7 +18,6 @@ public class HealthManager : MonoBehaviour
 
     private void TakeDamage(int dmg)
     {
-        Debug.Log("player hit with dmg" + dmg);
         _currentHealth -= dmg;
         ClampHealth();
         UpdateHealthBar();
