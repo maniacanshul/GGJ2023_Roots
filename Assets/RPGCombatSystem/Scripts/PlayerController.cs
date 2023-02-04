@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour
 
             if (moveDirection.magnitude > 0) //Fixes the problem when there is no movement
             {
+                if (thirdPersonCam)
                 //To rotate the controller when moving and position it correctly relative to the camera
                 charCont.transform.rotation = new Quaternion(charCont.transform.rotation.x, thirdPersonCam.transform.rotation.y, charCont.transform.rotation.z, thirdPersonCam.transform.rotation.w);
 

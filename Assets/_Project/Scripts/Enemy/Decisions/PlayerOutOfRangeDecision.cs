@@ -5,11 +5,13 @@ namespace GGJ.Enemies.Decisions
     [CreateAssetMenu(menuName = "Enemies/Decisions/PlayerOutOfRangeDecision")]
     public class PlayerOutOfRangeDecision : Decision
     {
+        [SerializeField] private float m_distance = -1f;
         public override bool Decide(StateController controller)
         {
+            float checkDistance = m_distance < 0f ? controller.enemyData.maxChaseDistance : m_distance;
             float distance = (controller.transform.position - controller.chaseTarget.position).sqrMagnitude;
-            Debug.Log(distance);
-            if (distance > controller.enemyData.maxChaseDistance * controller.enemyData.maxChaseDistance)
+
+            if (distance > checkDistance * checkDistance)
                 return true;
             return false;
         }
