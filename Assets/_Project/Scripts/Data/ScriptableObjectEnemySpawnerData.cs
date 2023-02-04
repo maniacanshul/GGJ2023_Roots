@@ -10,7 +10,7 @@ public class ScriptableObjectEnemySpawnerData : ScriptableObject
     public List<EnemySpawnProbability> enemyData;
 
     [Header("Do Not Edit Manually, Use Populate Enemies Context Button to generate")]
-    public List<Enemy_Type> enemiesForThisLevel;
+    [ReadOnly] public List<Enemy_Type> enemiesForThisLevel;
 
     private int counter = 0;
 
