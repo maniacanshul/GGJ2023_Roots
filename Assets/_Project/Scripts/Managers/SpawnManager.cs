@@ -4,6 +4,8 @@ using GGJ.Enemies;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+using GGJ.Managers;
+
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
@@ -14,23 +16,23 @@ public class SpawnManager : MonoBehaviour
     }
 
 
-    void SplitEnemy(EnemyManager enemy)
+    void SplitEnemy(EnemyManager enemy, WaveSpawner waveSpawner)
     {
         Debug.Log("Works");
         switch (enemy.Count)
         {
             case 2:
-                SpawnTwoEnemies(enemy);
+                SpawnTwoEnemies(enemy, waveSpawner);
                 break;
             case 3:
-                SpawnThreeEnemies(enemy);
+                SpawnThreeEnemies(enemy, waveSpawner);
                 break;
             default:
                 break;
         }
     }
 
-    private void SpawnTwoEnemies(EnemyManager parent)
+    private void SpawnTwoEnemies(EnemyManager parent, WaveSpawner waveSpawner)
     {
         var e1 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(2,0,0), parent.transform.rotation);
         var e2 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(-2,0,0), parent.transform.rotation);
@@ -45,6 +47,9 @@ public class SpawnManager : MonoBehaviour
         
         stc1.wayPointList = this.wayPointList;
         stc2.wayPointList = this.wayPointList;
+
+        stc1.waveSpawner = waveSpawner;
+        stc2.waveSpawner = waveSpawner;
         
         if(GameManager.instance.enemyList.ContainsKey(parentIndex))
         {
@@ -57,7 +62,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    private void SpawnThreeEnemies(EnemyManager parent)
+    private void SpawnThreeEnemies(EnemyManager parent, WaveSpawner waveSpawner)
     {
         var e1 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(3,0,0), parent.transform.rotation);
         var e2 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(0,0,0), parent.transform.rotation);
@@ -70,6 +75,10 @@ public class SpawnManager : MonoBehaviour
         var stc1 = e1.GetComponent<StateController>();
         var stc2 = e2.GetComponent<StateController>();
         var stc3 = e3.GetComponent<StateController>();
+
+        stc1.waveSpawner = waveSpawner;
+        stc2.waveSpawner = waveSpawner;
+        stc3.waveSpawner = waveSpawner;
         
         var parentIndex = parent.parentPower == -1 ? parent.power : parent.parentPower;
 

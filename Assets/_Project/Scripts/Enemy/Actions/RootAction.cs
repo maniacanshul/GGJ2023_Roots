@@ -10,16 +10,16 @@ namespace GGJ.Enemies.Decisions
         {
             if (controller.EnemyManager.IsSqrt())
             {
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager, controller.waveSpawner);
             }
             else if (controller.EnemyManager.IsCubeRoot())
             {
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager, controller.waveSpawner);
             }
             else
             {
                 GameManager.instance.enemyList[controller.EnemyManager.parentPower]--;
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager, controller.waveSpawner);
                 if (controller.EnemyManager.parentPower != -1)
                 {
                     GameManager.instance.enemyList[controller.EnemyManager.parentPower]--;
@@ -32,6 +32,7 @@ namespace GGJ.Enemies.Decisions
                 GameManager.instance.OnEnemyDied();
             }
             GameManager.instance.OnPlayerScored(1);
+            controller.waveSpawner.DeleteEnemy(controller.gameObject);
             Destroy(controller.gameObject);
         }
 

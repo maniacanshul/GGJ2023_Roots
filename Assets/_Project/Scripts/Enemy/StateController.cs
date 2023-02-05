@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using System.Collections.Generic;
 
 using GGJ.Data;
+using GGJ.Managers;
 using Unity.VisualScripting;
 
 namespace GGJ.Enemies
@@ -15,6 +16,18 @@ namespace GGJ.Enemies
         public float battleRadius = 2f;
         public EnemyData enemyData;
         public List<Transform> wayPointList;
+
+        private WaveSpawner _spawner;
+        public WaveSpawner waveSpawner {
+            get {
+                return _spawner;
+            }
+
+            set {
+                _spawner = value;
+                value.AddEnemy(this.gameObject);
+            }
+        }
 
         [Header("Debug")]
         [ReadOnly] public Transform chaseTarget;
