@@ -11,11 +11,12 @@ public class ScoreManager : MonoBehaviour
    private void Awake()
    {
 
-      GameManager.PlayerScored += IncreaseScore;
+      // GameManager.PlayerDied += IncreaseScore;
       GameManager.SplitEnemy += (enemy) =>
       {
          _enemiesLeft -= enemy.isParent ? 1 : 0;
-      };
+      }
+         
    }
 
    private void IncreaseScore(int amt, int multiplier)
