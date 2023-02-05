@@ -12,12 +12,14 @@ namespace GGJ.Enemies
         [SerializeField] private State m_currentState;
         [SerializeField] private State m_remainState;
         
+        public float battleRadius = 2f;
         public EnemyData enemyData;
         public List<Transform> wayPointList;
 
         [Header("Debug")]
         [ReadOnly] public Transform chaseTarget;
         [ReadOnly] public float stateTimeElapsed = 0f;
+        [ReadOnly] public Vector3 targetPosition = new Vector3();
 
         [HideInInspector] public NavMeshAgent navMeshAgent;
         [HideInInspector] public EnemyManager EnemyManager;

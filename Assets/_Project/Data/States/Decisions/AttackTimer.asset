@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed82dff9531489a4089dc8991f74822e, type: 3}
-  m_Name: TimeElapsed
+  m_Name: AttackTimer
   m_EditorClassIdentifier: 
-  timeToCheck: 2
+  minTimeToCheck: 1
+  maxTimeToCheck: 2

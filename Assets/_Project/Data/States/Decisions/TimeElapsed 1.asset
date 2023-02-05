@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f494d3daf47f745b6bc44a1f2ab33f, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: ed82dff9531489a4089dc8991f74822e, type: 3}
+  m_Name: TimeElapsed 1
   m_EditorClassIdentifier: 
-  returnState: {fileID: 11400000, guid: 859e70663c87f0f48b8f8211e4fd5b5f, type: 2}
+  timeToCheck: 2

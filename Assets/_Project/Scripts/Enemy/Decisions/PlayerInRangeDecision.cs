@@ -17,6 +17,7 @@ namespace GGJ.Enemies.Decisions
             if (Physics.SphereCast(position, lookRange, direction, out hit, controller.enemyData.maxChaseDistance) && hit.collider.CompareTag("Player"))
             {
                 controller.chaseTarget = hit.transform;
+                controller.targetPosition =  - (controller.chaseTarget.position - controller.transform.position).normalized * controller.battleRadius;
                 return true;
             }
             else
