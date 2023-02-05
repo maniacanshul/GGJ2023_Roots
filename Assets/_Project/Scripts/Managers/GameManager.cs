@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager>
     public static Action PlayerDied;
     public static Action<int, int, Transform> SplitEnemy;
 
+
     private void Start()
     {
         StartGame();
@@ -30,6 +31,11 @@ public class GameManager : Singleton<GameManager>
     {
         SplitEnemy?.Invoke(power, count, enemyTransform);
         comboMeter.EnemySucessfullyHit();
+    }
+
+    public void OnEnemyWrongHit()
+    {
+        comboMeter.EnemyHitUnsucessfully();
     }
 
     public void OnPlayerHit(int dmg)
