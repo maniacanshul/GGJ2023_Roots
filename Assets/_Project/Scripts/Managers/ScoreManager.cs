@@ -11,18 +11,18 @@ public class ScoreManager : MonoBehaviour
 
    private void Awake()
    {
-
-      
-      GameManager.EnemyDied += () =>
-      {
-         _enemiesLeft--;
-         objectiveText.text = $"Questions Left : {_enemiesLeft}";
-      };
+      GameManager.EnemyDied += EnemyDead;
    }
 
    private void IncreaseScore(int amt, int multiplier)
    {
       _currentScore += amt * multiplier;
 
+   }
+
+   private void EnemyDead()
+   {
+      _enemiesLeft--;
+      objectiveText.text = $"Questions Left : {_enemiesLeft}";
    }
 }

@@ -89,7 +89,6 @@ public class SpawnManager : MonoBehaviour
         else
         {
             GameManager.instance.enemyList[parentIndex] = 2;
-
         }
     }
 }
