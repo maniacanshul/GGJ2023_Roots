@@ -13,32 +13,82 @@ public class SpawnManager : MonoBehaviour
         GameManager.SplitEnemy += SplitEnemy;
     }
 
-    void SplitEnemy(int power, int count, Transform enemy)
+
+    void SplitEnemy(EnemyManager enemy)
     {
         Debug.Log("Works");
-        switch (count)
+        switch (enemy.Count)
         {
             case 2:
-                var e1 = Instantiate(enemyPrefab, enemy.position + new Vector3(2, 0, 0), enemy.rotation);
-                e1.GetComponent<EnemyManager>().setPower((int)Mathf.Sqrt(power));
-                e1.GetComponent<StateController>().wayPointList = this.wayPointList;
-                var e2 = Instantiate(enemyPrefab, enemy.position + new Vector3(-2, 0, 0), enemy.rotation);
-                e2.GetComponent<EnemyManager>().setPower((int)Mathf.Sqrt(power));
-                e2.GetComponent<StateController>().wayPointList = this.wayPointList;
+                SpawnTwoEnemies(enemy);
                 break;
             case 3:
-                var e3 = Instantiate(enemyPrefab, enemy.position + new Vector3(3, 0, 0), enemy.rotation);
-                e3.GetComponent<EnemyManager>().setPower((int)Mathf.Sqrt(power));
-                e3.GetComponent<StateController>().wayPointList = this.wayPointList;
-                var e4 = Instantiate(enemyPrefab, enemy.position + new Vector3(0, 0, 0), enemy.rotation);
-                e4.GetComponent<EnemyManager>().setPower((int)Mathf.Sqrt(power));
-                e4.GetComponent<StateController>().wayPointList = this.wayPointList;
-                var e5 = Instantiate(enemyPrefab, enemy.position + new Vector3(-3, 0, 0), enemy.rotation);
-                e5.GetComponent<EnemyManager>().setPower((int)Mathf.Sqrt(power));
-                e5.GetComponent<StateController>().wayPointList = this.wayPointList;
+                SpawnThreeEnemies(enemy);
                 break;
             default:
                 break;
+        }
+    }
+
+    private void SpawnTwoEnemies(EnemyManager parent)
+    {
+        var e1 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(2,0,0), parent.transform.rotation);
+        var e2 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(-2,0,0), parent.transform.rotation);
+        var man1 = e1.GetComponent<EnemyManager>();
+        var man2 = e2.GetComponent<EnemyManager>();
+        var stc1 = e1.GetComponent<StateController>();
+        var stc2 = e2.GetComponent<StateController>();
+
+        var parentIndex = parent.parentPower == -1 ? parent.power : parent.parentPower;
+        man1.SetPower((int)Mathf.Sqrt(parent.power),parentIndex);
+        man2.SetPower((int)Mathf.Sqrt(parent.power),parentIndex);
+        
+        stc1.wayPointList = this.wayPointList;
+        stc2.wayPointList = this.wayPointList;
+        
+        if(GameManager.instance.enemyList.ContainsKey(parentIndex))
+        {
+            GameManager.instance.enemyList[parentIndex] += 2;
+        }
+        else
+        {
+            GameManager.instance.enemyList[parentIndex] = 2;
+
+        }
+    }
+
+    private void SpawnThreeEnemies(EnemyManager parent)
+    {
+        var e1 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(3,0,0), parent.transform.rotation);
+        var e2 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(0,0,0), parent.transform.rotation);
+        var e3 = Instantiate(enemyPrefab, parent.transform.position + new Vector3(-3,0,0), parent.transform.rotation);
+        
+        var man1 = e1.GetComponent<EnemyManager>();
+        var man2 = e2.GetComponent<EnemyManager>();
+        var man3 = e3.GetComponent<EnemyManager>();
+        
+        var stc1 = e1.GetComponent<StateController>();
+        var stc2 = e2.GetComponent<StateController>();
+        var stc3 = e3.GetComponent<StateController>();
+        
+        var parentIndex = parent.parentPower == -1 ? parent.power : parent.parentPower;
+
+        
+        man1.SetPower((int)Mathf.Sqrt(parent.power),parentIndex);
+        man2.SetPower((int)Mathf.Sqrt(parent.power),parentIndex);
+        man3.SetPower((int)Mathf.Sqrt(parent.power),parentIndex);
+        
+        stc1.wayPointList = this.wayPointList;
+        stc2.wayPointList = this.wayPointList;
+        stc3.wayPointList = this.wayPointList;
+        
+        if(GameManager.instance.enemyList.ContainsKey(parentIndex))
+        {
+            GameManager.instance.enemyList[parentIndex] += 2;
+        }
+        else
+        {
+            GameManager.instance.enemyList[parentIndex] = 2;
         }
     }
 }

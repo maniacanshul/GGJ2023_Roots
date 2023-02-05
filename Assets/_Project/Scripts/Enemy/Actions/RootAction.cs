@@ -10,15 +10,28 @@ namespace GGJ.Enemies.Decisions
         {
             if (controller.EnemyManager.IsSqrt())
             {
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager.power, 2, controller.gameObject.transform);
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
             }
             else if (controller.EnemyManager.IsCubeRoot())
             {
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager.power, 3, controller.gameObject.transform);
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
             }
             else
             {
+                GameManager.instance.enemyList[controller.EnemyManager.parentPower]--;
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
+                if (controller.EnemyManager.parentPower != -1)
+                {
+                    GameManager.instance.enemyList[controller.EnemyManager.parentPower]--;
+                }
+                Debug.Log($"Spawned two {Mathf.Sqrt(controller.EnemyManager.power)}");
             }
+
+            if (controller.EnemyManager.parentPower != -1 && GameManager.instance.enemyList[controller.EnemyManager.parentPower] == 0)
+            {
+                GameManager.instance.OnEnemyDied();
+            }
+            GameManager.instance.OnPlayerScored(1);
             Destroy(controller.gameObject);
         }
 

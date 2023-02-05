@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Serialization;
@@ -5,16 +6,23 @@ using UnityEngine.Serialization;
 public class ScoreManager : MonoBehaviour
 {
    private int _currentScore = 0;
-   [SerializeField] private TextMeshProUGUI scoreText;
+   private int _enemiesLeft = 100;
+   [SerializeField] private TextMeshProUGUI objectiveText;
 
    private void Awake()
    {
-      // GameManager.PlayerScored += IncreaseScore;
+      GameManager.EnemyDied += EnemyDead;
    }
 
    private void IncreaseScore(int amt, int multiplier)
    {
-      // _currentScore += amt * multiplier;
-      // scoreText.text = $"Score : {_currentScore}";
+      _currentScore += amt * multiplier;
+
+   }
+
+   private void EnemyDead()
+   {
+      _enemiesLeft--;
+      objectiveText.text = $"Questions Left : {_enemiesLeft}";
    }
 }
