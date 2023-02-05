@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bd94856e0617844b8ed4c8b26704cdc
+guid: cf6a3b6581ea005499231ac7e8488c1c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -22,9 +22,9 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 1
-    importConstraints: 1
-    animationCompression: 3
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -33,40 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Attack(1h)
-      takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Attack(1h)
-      internalID: 1439766027536691665
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|AttackCombo
-      takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|AttackCombo
-      internalID: -6473578970393010341
+      name: 'KayKit Animated Character|KayKit Animated Character|KayKit Animated
+        Character|KayKit '
+      takeName: 'KayKit Animated Character|KayKit Animated Character|KayKit Animated
+        Character|KayKit '
+      internalID: -899660836667034397
       firstFrame: 0
       lastFrame: 2
       wrapMode: 0
@@ -93,10 +64,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|AttackSpinn
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .001
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|AttackSpinn
-      internalID: -1186778813625577656
+        Character|KayKit .001
+      internalID: -5734566788468907529
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -123,10 +95,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|BasePose
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .002
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|BasePose
-      internalID: 2210395663572855809
+        Character|KayKit .002
+      internalID: -5166670171391153010
       firstFrame: 0
       lastFrame: 0
       wrapMode: 0
@@ -153,10 +126,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Block
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .003
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Block
-      internalID: 4094279697718398112
+        Character|KayKit .003
+      internalID: -8837955757736294905
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -183,10 +157,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Cheer
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .004
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Cheer
-      internalID: -3797241826809032370
+        Character|KayKit .004
+      internalID: 6509888707706685355
       firstFrame: 0
       lastFrame: 2
       wrapMode: 0
@@ -213,10 +188,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Climbing
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .005
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Climbing
-      internalID: -7170109181137599527
+        Character|KayKit .005
+      internalID: 4735159384839482986
       firstFrame: 0
       lastFrame: 2
       wrapMode: 0
@@ -243,10 +219,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Dance
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .006
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Dance
-      internalID: -2829689577552402980
+        Character|KayKit .006
+      internalID: -6344369857277445282
       firstFrame: 0
       lastFrame: 2
       wrapMode: 0
@@ -273,10 +250,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|DashBack
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .007
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|DashBack
-      internalID: 1175576331324543237
+        Character|KayKit .007
+      internalID: -5185286274250647309
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -303,10 +281,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|DashFront
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .008
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|DashFront
-      internalID: -6620324289920830826
+        Character|KayKit .008
+      internalID: 8227861563826572617
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -333,10 +312,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|DashLeft
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .009
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|DashLeft
-      internalID: 5858155180733092999
+        Character|KayKit .009
+      internalID: 8618788407777214859
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -363,10 +343,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|DashRight
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .010
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|DashRight
-      internalID: -2687492270817606506
+        Character|KayKit .010
+      internalID: 2489983135387358293
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -393,10 +374,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Defeat
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .011
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Defeat
-      internalID: -8162794843620619380
+        Character|KayKit .011
+      internalID: -6725682561453270319
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -423,10 +405,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|HeavyAttack
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .012
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|HeavyAttack
-      internalID: 8691179721316235246
+        Character|KayKit .012
+      internalID: 6559884724276100881
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -453,10 +436,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Hop
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .013
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Hop
-      internalID: -4933900660540920026
+        Character|KayKit .013
+      internalID: 1536169785049910655
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -483,10 +467,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Idle
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .014
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Idle
-      internalID: 8839751473216641672
+        Character|KayKit .014
+      internalID: 1047499829539368283
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -515,8 +500,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Interact
-      internalID: 3382683327031011948
+        Character|KayKit .015
+      internalID: -5444205960335523325
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -543,10 +528,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Jump
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .016
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Jump
-      internalID: 3480835123903226061
+        Character|KayKit .016
+      internalID: -5626982873631767923
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -573,10 +559,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|LayingDownI
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .017
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|LayingDownI
-      internalID: -1094938220962185026
+        Character|KayKit .017
+      internalID: -1437209233134092930
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -603,10 +590,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|PickUp
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .018
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|PickUp
-      internalID: 6161268293341709271
+        Character|KayKit .018
+      internalID: 6452024718706750701
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -633,10 +621,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Roll
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .019
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Roll
-      internalID: 40774814350871247
+        Character|KayKit .019
+      internalID: 8049103593916250211
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -663,10 +652,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Run
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .020
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Run
-      internalID: 7833259120360664999
+        Character|KayKit .020
+      internalID: -7970189138136459377
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -693,10 +683,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Shoot(1h)
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .021
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Shoot(1h)
-      internalID: 4339125877339434906
+        Character|KayKit .021
+      internalID: 3098249883280964038
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -723,10 +714,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Shoot(2h)
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .022
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Shoot(2h)
-      internalID: 8009600245958982949
+        Character|KayKit .022
+      internalID: -8520425026729888012
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -753,10 +745,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Shoot(2h)Bo
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .023
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Shoot(2h)Bo
-      internalID: -7543734478644986346
+        Character|KayKit .023
+      internalID: 3658790848631727189
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -783,10 +776,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Shooting(1h
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .024
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Shooting(1h
-      internalID: -8956713342285084585
+        Character|KayKit .024
+      internalID: -3295115806431581341
       firstFrame: 0
       lastFrame: 2
       wrapMode: 0
@@ -813,10 +807,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Shooting(2h
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .025
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Shooting(2h
-      internalID: -5395788688898893079
+        Character|KayKit .025
+      internalID: -2451662847674893115
       firstFrame: 0
       lastFrame: 2
       wrapMode: 0
@@ -843,10 +838,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Throw
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .026
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Throw
-      internalID: 9123846933750011102
+        Character|KayKit .026
+      internalID: -8172642333299078049
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -873,10 +869,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Walk
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .027
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Walk
-      internalID: 1860023134859088203
+        Character|KayKit .027
+      internalID: -5237957610370441499
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -903,12 +900,44 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|Wave
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        .028
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
-        Character|Wave
-      internalID: 7655000450913487258
+        Character|KayKit .028
+      internalID: 1456108361337039549
       firstFrame: 0
       lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
+        Anim
+      takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
+        Character|KayKit Anim
+      internalID: 4081366557856052876
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -954,7 +983,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
-    maxBonesPerVertex: 3
+    maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
     meshOptimizationFlags: -1
@@ -980,52 +1009,7 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: Attack(1h)(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: KayKit Animated Character
-      parentName: Attack(1h)(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.0000002761675, y: 0.00000029802334, z: 0.00000006717954, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Body
-      parentName: KayKit Animated Character
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.00000008146034, y: 0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Head
-      parentName: Body
-      position: {x: -0, y: 0.7115979, z: 0}
-      rotation: {x: 7.1054274e-15, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 0.99999994, z: 1}
-    - name: armLeft
-      parentName: Body
-      position: {x: -0.14, y: 0.69159794, z: 0}
-      rotation: {x: 0.6997097, y: -0.102060616, z: 0.69970125, w: 0.1020199}
-      scale: {x: 1.000001, y: 1.0000001, z: 1}
-    - name: handSlotLeft
-      parentName: armLeft
-      position: {x: 0.00006835316, y: 0.55123425, z: -0.000070109956}
-      rotation: {x: 0.6066169, y: 0.60661674, z: -0.36334014, w: 0.36334005}
-      scale: {x: 1.0034294, y: 1.0034294, z: 1.0034293}
-    - name: armRight
-      parentName: Body
-      position: {x: 0.14, y: 0.69159794, z: 0}
-      rotation: {x: 0.69969916, y: 0.10208682, z: 0.69969827, w: -0.10208712}
-      scale: {x: 1.000001, y: 1.0000001, z: 1}
-    - name: handSlotRight
-      parentName: armRight
-      position: {x: 3.5527137e-15, y: 0.5509222, z: 0.000000014901172}
-      rotation: {x: 0.36333993, y: 0.3633402, z: -0.60661685, w: 0.6066169}
-      scale: {x: 0.99999994, y: 1, z: 0.99999994}
-    - name: PrototypePete
-      parentName: Attack(1h)(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.000000037748947, y: 5.4307467e-14, z: 2.1908189e-14, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -1036,13 +1020,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
