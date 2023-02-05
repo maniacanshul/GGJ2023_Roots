@@ -16,9 +16,9 @@ MonoBehaviour:
   maxEnemyPower: 97
   enemyData:
   - type: 0
-    probability: 100
-  - type: 1
     probability: 0
+  - type: 1
+    probability: 100
   - type: 2
     probability: 0
-  enemiesForThisLevel: 00000000000000000000000000000000
+  enemiesForThisLevel: 01000000010000000100000001000000
