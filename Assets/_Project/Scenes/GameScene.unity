@@ -2052,6 +2052,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1803447192558115512, guid: 434c61a6027fcb14a83db614abffa56a,
         type: 3}
+      propertyPath: mSpawnPoints.Array.data[0].waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1994658687}
+    - target: {fileID: 1803447192558115512, guid: 434c61a6027fcb14a83db614abffa56a,
+        type: 3}
+      propertyPath: mSpawnPoints.Array.data[0].waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 311537452}
+    - target: {fileID: 1803447192558115512, guid: 434c61a6027fcb14a83db614abffa56a,
+        type: 3}
       propertyPath: mSpawnPoints.Array.data[1].waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 601415043}
@@ -2100,6 +2110,16 @@ PrefabInstance:
       propertyPath: mSpawnPoints.Array.data[5].waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1994658687}
+    - target: {fileID: 1803447192558115512, guid: 434c61a6027fcb14a83db614abffa56a,
+        type: 3}
+      propertyPath: mSpawnPoints.Array.data[6].waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 195620504}
+    - target: {fileID: 1803447192558115512, guid: 434c61a6027fcb14a83db614abffa56a,
+        type: 3}
+      propertyPath: mSpawnPoints.Array.data[6].waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1623275132}
     - target: {fileID: 1803447192558115513, guid: 434c61a6027fcb14a83db614abffa56a,
         type: 3}
       propertyPath: m_Name
