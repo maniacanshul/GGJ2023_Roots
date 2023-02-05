@@ -19,8 +19,18 @@ namespace GGJ.Managers
 
         [FormerlySerializedAs("m_spawnPoints")] [SerializeField] private SpawnPoint[] mSpawnPoints;
 
+        [SerializeField] private GameObject m_bookStack;
+
+        private Collider triggerCollider;
+        private bool enemiesSpawned = false;
+        
+        public List<GameObject> enemies;
+
         private void Start() {
-            SpawnWave(mSpawnerData.maxEnemyPower);
+            m_bookStack.SetActive(false);
+
+            triggerCollider = GetComponent<Collider>();
+            enemiesSpawned = false;
         }
 
         private void SpawnWave(int maxPower) {
@@ -42,11 +52,42 @@ namespace GGJ.Managers
                     manager.SetPower(power,-1);
                     GGJ.Enemies.StateController controller = newEnemy.GetComponent<GGJ.Enemies.StateController> ();
                     controller.wayPointList = spawnPoint.waypoints;
+                    controller.waveSpawner = this;
 
                 } else {
                     break;
                 }
             }
+
+            enemiesSpawned = true;
         }
+
+        private void OnDestroy() {
+            GameManager.instance.DestroyWaveSpawner(this);
+        }
+
+        public void AddEnemy(GameObject e) {
+            enemies.Add(e);
+        }
+
+        public void DeleteEnemy(GameObject e) {
+            enemies.Remove(e);
+            if (enemies.Count == 0) {
+                Destroy(m_bookStack);
+                Destroy(this.gameObject);
+            }
+        }
+
+        // when the player enters the collider
+        private void OnTriggerExit(Collider other) {
+            if (other.gameObject.CompareTag("Player")) {
+                // enable the bookstack
+                m_bookStack.SetActive(true);
+                SpawnWave(mSpawnerData.maxEnemyPower);
+                triggerCollider.enabled = false;
+            }
+        }
+
+
     }
 }

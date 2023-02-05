@@ -4,18 +4,23 @@ using System.Collections.Generic;
 using GGJ.Utilities;
 using UnityEngine;
 
+using GGJ.Managers;
+
 public class GameManager : Singleton<GameManager>
 {
     public GameTimer gameTimer;
     public ComboMeter comboMeter;
 
     [SerializeField] private GameObject _gameOverPanel;
+    [SerializeField] private GameObject _gameWonPanel;
+
+    [SerializeField] private List<WaveSpawner> _spawners;
 
     public static Action<int> PlayerHit;
     public static Action PlayerDied;
     public static Action EnemyDied;
 
-    public static Action<EnemyManager> SplitEnemy;
+    public static Action<EnemyManager, WaveSpawner> SplitEnemy;
 
     private int _comboMultiplier = 0;
     private float _timeRemaining = 60;
@@ -35,14 +40,21 @@ public class GameManager : Singleton<GameManager>
         gameTimer.StartTimer();
     }
 
+    public void DestroyWaveSpawner(WaveSpawner spawner) {
+        _spawners.Remove(spawner);
+        if (_spawners.Count == 0) {
+            _gameWonPanel.SetActive(true);
+        }
+    }
+
     public void OnPlayerScored(int score)
     {
     }
 
-    public void OnSplitEnemy(EnemyManager enemy)
+    public void OnSplitEnemy(EnemyManager enemy, WaveSpawner waveSpawner)
     {
         comboMeter.EnemySucessfullyHit();
-        SplitEnemy?.Invoke(enemy);
+        SplitEnemy?.Invoke(enemy, waveSpawner);
     }
 
     public void OnEnemyWrongHit()
