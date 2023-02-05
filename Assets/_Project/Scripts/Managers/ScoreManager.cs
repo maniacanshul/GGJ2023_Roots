@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 public class ScoreManager : MonoBehaviour
 {
    private int _currentScore = 0;
-   private int _enemiesLeft = 100;
+   private int _enemiesLeft = 36;
    public int enemiesLeft { get => _enemiesLeft; }
    
    [SerializeField] private TextMeshProUGUI objectiveText;
@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour
    private void Awake()
    {
       GameManager.EnemyDied += EnemyDead;
+
+      EnemyDead();
    }
 
    private void IncreaseScore(int amt, int multiplier)
@@ -25,6 +27,6 @@ public class ScoreManager : MonoBehaviour
    private void EnemyDead()
    {
       _enemiesLeft--;
-      objectiveText.text = $"Questions Left : {_enemiesLeft}";
+      objectiveText.text = $"Enemies Left : {_enemiesLeft} / 35";
    }
 }
