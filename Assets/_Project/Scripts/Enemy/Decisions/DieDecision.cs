@@ -9,7 +9,7 @@ namespace GGJ.Enemies.Decisions
     {
         public override bool Decide(StateController controller)
         {
-            if(controller.EnemyManager.health == 0)
+            if(controller.EnemyManager.Health == 0)
                 return true;
             return false;
         }

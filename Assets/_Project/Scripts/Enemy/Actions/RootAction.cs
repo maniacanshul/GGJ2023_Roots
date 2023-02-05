@@ -10,15 +10,19 @@ namespace GGJ.Enemies.Decisions
         {
             if (controller.EnemyManager.IsSqrt())
             {
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager.power, 2, controller.gameObject.transform);
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
             }
             else if (controller.EnemyManager.IsCubeRoot())
             {
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager.power, 3, controller.gameObject.transform);
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
             }
             else
             {
+
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager);
+                Debug.Log($"Spawned two {Mathf.Sqrt(controller.EnemyManager.power)}");
             }
+            GameManager.instance.OnPlayerScored(1);
             Destroy(controller.gameObject);
         }
 

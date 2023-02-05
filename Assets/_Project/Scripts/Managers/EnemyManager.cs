@@ -10,21 +10,26 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private TMP_Text powerText;
     public ScriptableObjectNumbersGenerator enemyPowerData;
     public int power;
-    public int health { get; private set; } = 64;
-    public int damage { get; private set; } = 5;
 
+    public bool isParent = false;
+    public int Health { get; private set; } = 64;
+    public int Damage { get; private set; }
+
+    public int Count { get; private set; } = 2;
 
     private void Awake()
     {
         powerText = GetComponentInChildren<TMP_Text>();
     }
 
-    public void setPower(int power)
+    public void SetPower(int power)
     {
         this.power = power;
+        Health = this.power;
+        Damage = this.power;
+        Count = IsSqrt() ? 2 : 3;
         powerText.text = power.ToString();
-        // health = this.power;
-        // damage = this.power;
+
     }
 
     public bool IsSqrt()
@@ -41,13 +46,13 @@ public class EnemyManager : MonoBehaviour
     {
         if (data.Item2 == Weapon_Type.SquareRoot && IsSqrt())
         {
-            health -= data.Item1;
-            health = Mathf.Max(0, health);
+            Health -= data.Item1;
+            Health = Mathf.Max(0, Health);
         }
         else if (data.Item2 == Weapon_Type.CubeRoot && IsCubeRoot())
         {
-            health -= data.Item1;
-            health = Mathf.Max(0, health);
+            Health -= data.Item1;
+            Health = Mathf.Max(0, Health);
         }
         else
         {

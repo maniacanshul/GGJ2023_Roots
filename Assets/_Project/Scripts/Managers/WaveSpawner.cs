@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 namespace GGJ.Managers
 {
@@ -11,34 +12,35 @@ namespace GGJ.Managers
 
     public class WaveSpawner : MonoBehaviour
     {
-        [SerializeField] private ScriptableObjectNumbersGenerator m_numbers;
-        [SerializeField] private ScriptableObjectEnemySpawnerData m_spawnerData;
+        [FormerlySerializedAs("m_numbers")] [SerializeField] private ScriptableObjectNumbersGenerator mNumbers;
+        [FormerlySerializedAs("m_spawnerData")] [SerializeField] private ScriptableObjectEnemySpawnerData mSpawnerData;
 
-        [SerializeField] private GameObject m_enemy;
+        [FormerlySerializedAs("m_enemy")] [SerializeField] private GameObject mEnemy;
 
-        [SerializeField] private SpawnPoint[] m_spawnPoints;
+        [FormerlySerializedAs("m_spawnPoints")] [SerializeField] private SpawnPoint[] mSpawnPoints;
 
         private void Start() {
-            SpawnWave(m_spawnerData.maxEnemyPower);
+            SpawnWave(mSpawnerData.maxEnemyPower);
         }
 
         private void SpawnWave(int maxPower) {
             while (true) {
-                if (m_spawnerData.HasAnyMoreEnemiesLeftInThisLevel()) {
-                    Enemy_Type type = m_spawnerData.GetEnemyToSpawn();
+                if (mSpawnerData.HasAnyMoreEnemiesLeftInThisLevel()) {
+                    Enemy_Type type = mSpawnerData.GetEnemyToSpawn();
                     int power = 0;
 
                     switch (type) {
-                        case Enemy_Type.CUBE : power = m_numbers.GetPerfectCube(maxPower); break;
-                        case Enemy_Type.SQUARE : power = m_numbers.GetPerfectSquare(maxPower); break;
-                        default : power = m_numbers.GetNormalNumber(maxPower); break;
+                        case Enemy_Type.CUBE : power = mNumbers.GetPerfectCube(maxPower); break;
+                        case Enemy_Type.SQUARE : power = mNumbers.GetPerfectSquare(maxPower); break;
+                        default : power = mNumbers.GetNormalNumber(maxPower); break;
                     }
 
-                    SpawnPoint spawnPoint = m_spawnPoints[Random.Range(0, m_spawnPoints.Length)];
-                    GameObject newEnemy = Instantiate(m_enemy, spawnPoint.point.position, Quaternion.identity, null);
+                    SpawnPoint spawnPoint = mSpawnPoints[Random.Range(0, mSpawnPoints.Length)];
+                    GameObject newEnemy = Instantiate(mEnemy, spawnPoint.point.position, Quaternion.identity, null);
 
                     EnemyManager manager = newEnemy.GetComponent<EnemyManager> ();
-                    manager.setPower(power);
+                    manager.isParent = true;
+                    manager.SetPower(power);
                     
                     GGJ.Enemies.StateController controller = newEnemy.GetComponent<GGJ.Enemies.StateController> ();
                     controller.wayPointList = spawnPoint.waypoints;

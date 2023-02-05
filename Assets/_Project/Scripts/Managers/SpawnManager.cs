@@ -13,12 +13,14 @@ public class SpawnManager : MonoBehaviour
         GameManager.SplitEnemy += SplitEnemy;
     }
 
-    void SplitEnemy(int power, int count, Transform enemy)
+
+    void SplitEnemy(EnemyManager enemy)
     {
         Debug.Log("Works");
-        switch (count)
+        switch (enemy.Count)
         {
             case 2:
+
                 var e1 = Instantiate(enemyPrefab, enemy.position + new Vector3(2, 0, 0), enemy.rotation);
                 e1.GetComponent<EnemyManager>().setPower((int)Mathf.Sqrt(power));
                 e1.GetComponent<StateController>().wayPointList = this.wayPointList;

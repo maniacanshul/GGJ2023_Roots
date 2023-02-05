@@ -10,7 +10,12 @@ public class GameManager : Singleton<GameManager>
 
     public static Action<int> PlayerHit;
     public static Action PlayerDied;
-    public static Action<int, int, Transform> SplitEnemy;
+
+    public static Action<EnemyManager> SplitEnemy;
+
+       private int _comboMultiplier = 0;
+    private float _timeRemaining = 60;
+    private bool _timerIsRunning = false;
 
 
     private void Start()
@@ -27,10 +32,10 @@ public class GameManager : Singleton<GameManager>
     {
     }
 
-    public void OnSplitEnemy(int power, int count, Transform enemyTransform)
+    public void OnSplitEnemy(EnemyManager enemy)
     {
-        SplitEnemy?.Invoke(power, count, enemyTransform);
         comboMeter.EnemySucessfullyHit();
+        SplitEnemy?.Invoke(enemy);
     }
 
     public void OnEnemyWrongHit()
