@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public GameTimer gameTimer;
+
+
     public static event Action<int, int> PlayerScored;
     public static Action<int> PlayerHit; 
     public static Action PlayerDied;
@@ -14,6 +17,15 @@ public class GameManager : Singleton<GameManager>
     private float _timeRemaining = 60;
     private bool _timerIsRunning = false;
 
+    private void Start()
+    {
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        gameTimer.StartTimer();
+    }
 
     public void OnPlayerScored(int score)
     {

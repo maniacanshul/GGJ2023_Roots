@@ -15,7 +15,7 @@ public class GameTimer : MonoBehaviour
     private Tween timerTextTween;
 
 
-    private void Start()
+    public void StartTimer()
     {
         // Starts the timer automatically
         timerIsRunning = true;
