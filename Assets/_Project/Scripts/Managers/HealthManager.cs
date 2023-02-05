@@ -10,6 +10,7 @@ public class HealthManager : MonoBehaviour
     private int _currentHealth;
     [SerializeField] private Image healthBar;
     [SerializeField] private int maxHealth, minHealth;
+
     void Awake()
     {
         GameManager.PlayerHit += TakeDamage;

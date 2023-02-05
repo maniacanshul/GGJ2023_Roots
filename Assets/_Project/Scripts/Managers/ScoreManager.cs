@@ -7,6 +7,8 @@ public class ScoreManager : MonoBehaviour
 {
    private int _currentScore = 0;
    private int _enemiesLeft = 100;
+   public int enemiesLeft { get => _enemiesLeft; }
+   
    [SerializeField] private TextMeshProUGUI objectiveText;
 
    private void Awake()
