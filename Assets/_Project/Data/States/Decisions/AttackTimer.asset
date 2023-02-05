@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed82dff9531489a4089dc8991f74822e, type: 3}
   m_Name: AttackTimer
   m_EditorClassIdentifier: 
-  minTimeToCheck: 1
-  maxTimeToCheck: 2
+  minTimeToCheck: 2
+  maxTimeToCheck: 2.1

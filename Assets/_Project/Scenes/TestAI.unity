@@ -379,6 +379,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1167792518330585512, guid: 5479e9b590e933348b707063edbc8847,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167792518330585512, guid: 5479e9b590e933348b707063edbc8847,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167792518330585512, guid: 5479e9b590e933348b707063edbc8847,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1918582824962433409, guid: 5479e9b590e933348b707063edbc8847,
         type: 3}
       propertyPath: m_RootOrder
@@ -438,6 +453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClassRooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920563734401658396, guid: 5479e9b590e933348b707063edbc8847,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5479e9b590e933348b707063edbc8847, type: 3}
