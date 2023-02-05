@@ -12,7 +12,7 @@ namespace GGJ.UI
 
         private void OnEnable() {
             Time.timeScale = 0;
-            scoreText.text = (100 - scoreManager.enemiesLeft).ToString() + " / 100";
+            scoreText.text = (35 - scoreManager.enemiesLeft).ToString() + " / 35";
         }
 
         public void ReloadLevel() {
