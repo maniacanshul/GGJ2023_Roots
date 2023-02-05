@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [HideInInspector] public CharacterController charCont;
     [HideInInspector] public Animator anim;
+    public CameraShakeManager cameraShakeManager;
     public GameObject childPlayer;
     public Camera cam;
     [SerializeField]
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
             {
                 canJump = true;
                 anim.SetBool("Jump", false);
+                cameraShakeManager.CameraShakeOnPlayerHit();
                 if (fallTime > 0.2f )
                 {
                     soundMan.PlaySound("Land");

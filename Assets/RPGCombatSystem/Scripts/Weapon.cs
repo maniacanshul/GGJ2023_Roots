@@ -7,8 +7,7 @@ public class Weapon : MonoBehaviour
     public int dmgValue = 132; //Damage of the weapon
     public Color dmgColor = Color.cyan; //Color of the text with the damage value
     public Weapon_Type weaponType;
-
-
+    public CameraShakeManager cameraShakeManager;
     private BoxCollider coll; //Collider of the weapon
 
     void Awake()
@@ -22,6 +21,7 @@ public class Weapon : MonoBehaviour
         Debug.Log(other.name);
         if (other.tag == "Enemy")
         {
+            cameraShakeManager.CameraShakeOnEnemyHit();
             other.SendMessage("TakeDamage", (dmgValue, weaponType));
         }
     }
