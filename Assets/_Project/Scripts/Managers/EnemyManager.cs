@@ -8,8 +8,11 @@ using UnityEngine.Serialization;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text powerText;
+    [SerializeField] private List<EnemyMaterialsData> enemymaterials;
+    [SerializeField] private SkinnedMeshRenderer enemyMesh;
+
     public ScriptableObjectNumbersGenerator enemyPowerData;
-    public int power; 
+    public int power;
     public int parentPower;
     public int Health { get; private set; } = 64;
     public int Damage { get; private set; }
@@ -19,9 +22,16 @@ public class EnemyManager : MonoBehaviour
     private void Awake()
     {
         powerText = GetComponentInChildren<TMP_Text>();
+        ChangeEnemyMaterial();
     }
 
-    public void SetPower(int power,int parent)
+    private void ChangeEnemyMaterial()
+    {
+        int randomIndex = UnityEngine.Random.Range(0, enemymaterials.Count);
+        enemyMesh.materials = enemymaterials[randomIndex].mat.ToArray();
+    }
+
+    public void SetPower(int power, int parent)
     {
         this.power = power;
         this.parentPower = parent;
@@ -58,5 +68,11 @@ public class EnemyManager : MonoBehaviour
         {
             GameManager.instance.OnEnemyWrongHit();
         }
+    }
+
+    [System.Serializable]
+    public class EnemyMaterialsData
+    {
+        public List<Material> mat;
     }
 }
