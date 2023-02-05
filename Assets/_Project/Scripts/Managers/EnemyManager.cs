@@ -37,9 +37,12 @@ public class EnemyManager : MonoBehaviour
         this.parentPower = parent;
         Health = this.power;
         Damage = this.power;
-        Count = IsSqrt() ? 2 : 3;
+        Count = 0;
+        if (IsSqrt())
+            Count = 2;
+        else if (IsCubeRoot())
+            Count = 3;
         powerText.text = power.ToString();
-
     }
 
     public bool IsSqrt()
@@ -60,6 +63,11 @@ public class EnemyManager : MonoBehaviour
             Health = Mathf.Max(0, Health);
         }
         else if (data.Item2 == Weapon_Type.CubeRoot && IsCubeRoot())
+        {
+            Health -= data.Item1;
+            Health = Mathf.Max(0, Health);
+        }
+        else if (!IsSqrt() && !IsCubeRoot())
         {
             Health -= data.Item1;
             Health = Mathf.Max(0, Health);
