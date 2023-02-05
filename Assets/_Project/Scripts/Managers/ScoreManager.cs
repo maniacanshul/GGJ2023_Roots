@@ -9,12 +9,12 @@ public class ScoreManager : MonoBehaviour
 
    private void Awake()
    {
-      GameManager.PlayerScored += IncreaseScore;
+      // GameManager.PlayerScored += IncreaseScore;
    }
 
    private void IncreaseScore(int amt, int multiplier)
    {
-      _currentScore += amt * multiplier;
-      scoreText.text = $"Score : {_currentScore}";
+      // _currentScore += amt * multiplier;
+      // scoreText.text = $"Score : {_currentScore}";
    }
 }

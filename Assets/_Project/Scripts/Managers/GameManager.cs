@@ -6,16 +6,11 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public GameTimer gameTimer;
+    public ComboMeter comboMeter;
 
-
-    public static event Action<int, int> PlayerScored;
-    public static Action<int> PlayerHit; 
+    public static Action<int> PlayerHit;
     public static Action PlayerDied;
-    public static Action<int,int,Transform> SplitEnemy;
-
-    private int _comboMultiplier = 0;
-    private float _timeRemaining = 60;
-    private bool _timerIsRunning = false;
+    public static Action<int, int, Transform> SplitEnemy;
 
     private void Start()
     {
@@ -29,23 +24,12 @@ public class GameManager : Singleton<GameManager>
 
     public void OnPlayerScored(int score)
     {
-        if (!_timerIsRunning)
-        {
-            _timerIsRunning = true;
-            _timeRemaining = 60;
-            StartCoroutine(StartComboTimer());
-        }
-        else
-        {
-            _comboMultiplier++;
-        }
-
-        PlayerScored?.Invoke(score, (_comboMultiplier / 4) + 1);
     }
 
     public void OnSplitEnemy(int power, int count, Transform enemyTransform)
     {
-        SplitEnemy?.Invoke(power,count,enemyTransform);
+        SplitEnemy?.Invoke(power, count, enemyTransform);
+        comboMeter.EnemySucessfullyHit();
     }
 
     public void OnPlayerHit(int dmg)
@@ -57,16 +41,4 @@ public class GameManager : Singleton<GameManager>
     {
         PlayerDied?.Invoke();
     }
-
-    IEnumerator StartComboTimer()
-    {
-        while (_timeRemaining>0)
-        {
-            _timeRemaining -= 1;
-            yield return new WaitForSeconds(1);
-        }
-
-        _timerIsRunning = false;
-    }
-
 }
