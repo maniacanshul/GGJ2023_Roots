@@ -9,6 +9,12 @@ public class WeaponSwitcher : MonoBehaviour
 
     private int weaponIndex = 0; // 0 square root, 1 cube root
 
+    private void Start()
+    {
+        weaponIndex = 0;
+        UpdateWeaponOnSwitching();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(1))
