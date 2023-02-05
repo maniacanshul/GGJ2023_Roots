@@ -11,7 +11,7 @@ namespace GGJ.Enemies.Actions
         }
 
         private void Chase(StateController controller){
-            controller.navMeshAgent.destination = controller.chaseTarget.position;
+            controller.navMeshAgent.destination = controller.chaseTarget.position + controller.targetPosition;
             controller.navMeshAgent.isStopped = false;
         }
     }    
