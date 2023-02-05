@@ -49,5 +49,9 @@ public class EnemyManager : MonoBehaviour
             health -= data.Item1;
             health = Mathf.Max(0, health);
         }
+        else
+        {
+            GameManager.instance.OnEnemyWrongHit();
+        }
     }
 }
