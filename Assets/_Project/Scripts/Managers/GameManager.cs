@@ -5,15 +5,27 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public GameTimer gameTimer;
+
+
     public static event Action<int, int> PlayerScored;
     public static Action<int> PlayerHit; 
     public static Action PlayerDied;
-    public static Action<int,Transform> splitEnemy;
+    public static Action<int,int,Transform> SplitEnemy;
 
     private int _comboMultiplier = 0;
     private float _timeRemaining = 60;
     private bool _timerIsRunning = false;
 
+    private void Start()
+    {
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        gameTimer.StartTimer();
+    }
 
     public void OnPlayerScored(int score)
     {
@@ -31,9 +43,13 @@ public class GameManager : Singleton<GameManager>
         PlayerScored?.Invoke(score, (_comboMultiplier / 4) + 1);
     }
 
+    public void OnSplitEnemy(int power, int count, Transform enemyTransform)
+    {
+        SplitEnemy?.Invoke(power,count,enemyTransform);
+    }
+
     public void OnPlayerHit(int dmg)
     {
-        Debug.Log("player hit");
         PlayerHit?.Invoke(dmg);
     }
 

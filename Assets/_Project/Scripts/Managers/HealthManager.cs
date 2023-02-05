@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class HealthManager : MonoBehaviour
 {
     private int _currentHealth;
-    [SerializeField] private Slider healthBar;
+    [SerializeField] private Image healthBar;
     [SerializeField] private int maxHealth, minHealth;
     void Awake()
     {
@@ -18,7 +19,6 @@ public class HealthManager : MonoBehaviour
 
     private void TakeDamage(int dmg)
     {
-        Debug.Log("player hit with dmg" + dmg);
         _currentHealth -= dmg;
         ClampHealth();
         UpdateHealthBar();
@@ -42,6 +42,6 @@ public class HealthManager : MonoBehaviour
 
     private void UpdateHealthBar()
     {
-        healthBar.value = _currentHealth / 100.0f;
+        healthBar.DOFillAmount(_currentHealth / 100.0f, 0.15f).SetEase(Ease.InOutBack);
     }
 }

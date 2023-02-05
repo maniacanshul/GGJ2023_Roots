@@ -7,7 +7,7 @@ public class AnimatorEvents : MonoBehaviour
     private Animator anim;
     private PlayerController playerCont;
 
-    public Weapon weapon;
+    public Weapon[] weapons;
 
     void Awake()
     {
@@ -26,10 +26,16 @@ public class AnimatorEvents : MonoBehaviour
 
     public void EnableWeaponColl()
     {
-        weapon.EnableColliders();
+        foreach (var a in weapons)
+        {
+            a.EnableColliders();
+        }
     }
     public void DisableWeaponColl()
     {
-        weapon.DisableColliders();
+        foreach (var a in weapons)
+        {
+            a.DisableColliders();
+        }
     }
 }
