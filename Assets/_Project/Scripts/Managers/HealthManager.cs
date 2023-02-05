@@ -28,7 +28,7 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    private void RegenerateHealth(int amt)
+    public void RegenerateHealth(int amt)
     {
         _currentHealth += amt;
         ClampHealth();
