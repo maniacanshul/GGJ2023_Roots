@@ -22,6 +22,10 @@ namespace GGJ.Managers
             StartCoroutine(MoveIn(nextLevel));
         }
 
+        public void ReloadLevel() {
+            StartCoroutine(MoveIn(SceneManager.GetActiveScene().name));
+        }
+
         private IEnumerator MoveIn(string nextLevel) {
             m_animator.SetBool(fadeParamID, false);
             yield return new WaitForSeconds(0.6f);

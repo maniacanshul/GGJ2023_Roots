@@ -9,6 +9,8 @@ public class GameManager : Singleton<GameManager>
     public GameTimer gameTimer;
     public ComboMeter comboMeter;
 
+    [SerializeField] private GameObject _gameOverPanel;
+
     public static Action<int> PlayerHit;
     public static Action PlayerDied;
     public static Action EnemyDied;
@@ -24,6 +26,8 @@ public class GameManager : Singleton<GameManager>
     {
         StartGame();
         enemyList = new Dictionary<int, int>();
+
+        _gameOverPanel.SetActive(false);
     }
 
     public void StartGame()
@@ -57,7 +61,7 @@ public class GameManager : Singleton<GameManager>
 
     public void OnPlayerDied()
     {
-        PlayerDied?.Invoke();
+        _gameOverPanel.SetActive(true);
     }
 
     IEnumerator StartComboTimer()
