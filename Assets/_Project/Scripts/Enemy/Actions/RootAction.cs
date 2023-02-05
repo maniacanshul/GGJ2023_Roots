@@ -8,21 +8,23 @@ namespace GGJ.Enemies.Decisions
     {
         public override void OnEnterState(StateController controller)
         {
-            if (!controller.EnemyManager.IsSqrt())
+            if (controller.EnemyManager.IsSqrt())
             {
-                Debug.Log("Enemy died");
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager.power, 2, controller.gameObject.transform);
+            }
+            else if (controller.EnemyManager.IsCubeRoot())
+            {
+                GameManager.instance.OnSplitEnemy(controller.EnemyManager.power, 3, controller.gameObject.transform);
             }
             else
             {
-                GameManager.instance.OnSplitEnemy(controller.EnemyManager.power,2, controller.gameObject.transform);
-                Debug.Log($"Spawned two {Mathf.Sqrt(controller.EnemyManager.power)}");
             }
             Destroy(controller.gameObject);
         }
 
         public override void Act(StateController controller)
         {
-            
+
         }
     }
 }
