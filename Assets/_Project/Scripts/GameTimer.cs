@@ -34,6 +34,8 @@ public class GameTimer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+
+                GameManager.instance.OnPlayerDied();
             }
         }
     }
