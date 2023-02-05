@@ -26,7 +26,7 @@ namespace GGJ.Enemies.Decisions
 
         private void Attack(StateController controller) {
             PlayerController pc = controller.chaseTarget.GetComponent<PlayerController> ();
-            pc.ApplyDMG((controller.chaseTarget.position - controller.transform.position).normalized, 10f);
+            pc.ApplyDMG((controller.chaseTarget.position - controller.transform.position).normalized, Mathf.Sqrt(controller.EnemyManager.power));
         }
     }
 }
