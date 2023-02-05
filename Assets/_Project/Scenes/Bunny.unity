@@ -10820,7 +10820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4407116665444994129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4795926, y: -0.100058794, z: 10.204235}
+  m_LocalPosition: {x: -1.111, y: -0.100058794, z: 8.249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11102,7 +11102,7 @@ GameObject:
   - component: {fileID: 3918951831043954411}
   - component: {fileID: 4407116665444994130}
   m_Layer: 0
-  m_Name: MainChar
+  m_Name: MainChar_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

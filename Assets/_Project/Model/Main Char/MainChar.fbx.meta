@@ -713,8 +713,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: KayKit Animated Character|KayKit Animated Character|KayKit Animated Character|KayKit
-        .022
+      name: Walk
       takeName: KayKit Animated Character|KayKit Animated Character|KayKit Animated
         Character|KayKit .022
       internalID: -8520425026729888012
@@ -726,7 +725,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
