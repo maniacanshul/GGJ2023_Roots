@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     private int _comboMultiplier = 0;
     private float _timeRemaining = 60;
     private bool _timerIsRunning = false;
+    public Dictionary<int, int> enemyList;
 
     private void Start()
     {
