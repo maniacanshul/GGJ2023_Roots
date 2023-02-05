@@ -39,9 +39,7 @@ namespace GGJ.Managers
                     GameObject newEnemy = Instantiate(mEnemy, spawnPoint.point.position, Quaternion.identity, null);
 
                     EnemyManager manager = newEnemy.GetComponent<EnemyManager> ();
-                    manager.isParent = true;
-                    manager.SetPower(power);
-                    
+                    manager.SetPower(power,-1);
                     GGJ.Enemies.StateController controller = newEnemy.GetComponent<GGJ.Enemies.StateController> ();
                     controller.wayPointList = spawnPoint.waypoints;
 

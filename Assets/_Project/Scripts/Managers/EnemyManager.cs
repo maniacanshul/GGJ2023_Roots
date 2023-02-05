@@ -9,9 +9,8 @@ public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text powerText;
     public ScriptableObjectNumbersGenerator enemyPowerData;
-    public int power;
-
-    public bool isParent = false;
+    public int power; 
+    public int parentPower;
     public int Health { get; private set; } = 64;
     public int Damage { get; private set; }
 
@@ -22,9 +21,10 @@ public class EnemyManager : MonoBehaviour
         powerText = GetComponentInChildren<TMP_Text>();
     }
 
-    public void SetPower(int power)
+    public void SetPower(int power,int parent)
     {
         this.power = power;
+        this.parentPower = parent;
         Health = this.power;
         Damage = this.power;
         Count = IsSqrt() ? 2 : 3;
